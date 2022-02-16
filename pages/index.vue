@@ -43,7 +43,6 @@ export default {
     if (process.client) {
       document.querySelector("html").style.scrollBehavior = "smooth";
     }
-    window.scrollTo(0, 0);
   },
 
   components: {

@@ -29,15 +29,16 @@ export default {
       this.$emit("closeModalReset");
     },
   },
-  mounted() {},
   created() {
-    if (typeof window !== "undefined") {
-      window.addEventListener("keydown", (evt) => {
-        evt = evt || window.event;
-        if (evt.keyCode == 27) {
-          this.$emit("closeModalResetPassword");
-        }
-      });
+    if (process.client) {
+      if (typeof window !== "undefined") {
+        window.addEventListener("keydown", (evt) => {
+          evt = evt || window.event;
+          if (evt.keyCode == 27) {
+            this.$emit("closeModalResetPassword");
+          }
+        });
+      }
     }
   },
 };

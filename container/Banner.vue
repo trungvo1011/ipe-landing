@@ -1,5 +1,5 @@
 <template>
-  <div class="hompage-baner" v-on:scroll="scrollFunction">
+  <div class="hompage-baner">
     <div
       class="radio-btns__btn"
       v-for="(item, index) in arrData"
@@ -56,22 +56,16 @@ export default {
   methods: {
     scrollToHeader: function (type) {
       let offset = document.getElementById(type)?.offsetTop;
-      if (typeof window !== "undefined") {
-        switch (type) {
-          case "Work":
-            window.scrollTo(0, offset);
-            break;
-
-          default:
-            break;
-        }
-      }
-    },
-    scrollFunction: function () {
-      console.log("a");
       if (process.client) {
         if (typeof window !== "undefined") {
-          console.log(window.screenY);
+          switch (type) {
+            case "Work":
+              window.scrollTo(0, offset);
+              break;
+
+            default:
+              break;
+          }
         }
       }
     },
@@ -121,21 +115,24 @@ export default {
       }, delta);
     };
     if (process.client) {
-      window.onload = function () {
-        var elements = document.getElementsByClassName("typewrite");
-        for (var i = 0; i < elements.length; i++) {
-          var toRotate = elements[i].getAttribute("data-type");
-          var period = elements[i].getAttribute("data-period");
-          if (toRotate) {
-            new TxtType(elements[i], JSON.parse(toRotate), period);
+      if (typeof window !== "undefined") {
+        window.onload = function () {
+          var elements = document.getElementsByClassName("typewrite");
+          for (var i = 0; i < elements.length; i++) {
+            var toRotate = elements[i].getAttribute("data-type");
+            var period = elements[i].getAttribute("data-period");
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
           }
-        }
-        // INJECT CSS
-        var css = document.createElement("style");
-        css.type = "text/css";
-        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
-        document.body.appendChild(css);
-      };
+          // INJECT CSS
+          var css = document.createElement("style");
+          css.type = "text/css";
+          css.innerHTML =
+            ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+          document.body.appendChild(css);
+        };
+      }
     }
   },
 };

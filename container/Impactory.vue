@@ -206,8 +206,10 @@ export default {
       this.modalVideo = !this.modalVideo;
     },
     handleResize() {
-      if (typeof window !== "undefined") {
-        this.width = window.innerWidth;
+      if (process.client) {
+        if (typeof window !== "undefined") {
+          this.width = window.innerWidth;
+        }
       }
     },
 
@@ -248,16 +250,18 @@ export default {
     if (this.width < 1000 && this.width > 1400) {
       this.animate = false;
     }
-    if (typeof window !== "undefined") {
-      window.addEventListener("scroll", this.scrollFunction);
-      window.addEventListener("resize", this.handleResize);
-      this.handleResize();
-      window.addEventListener("keydown", (evt) => {
-        evt = evt || window.event;
-        if (evt.keyCode == 27) {
-          this.modalVideo = false;
-        }
-      });
+    if (process.client) {
+      if (typeof window !== "undefined") {
+        window.addEventListener("scroll", this.scrollFunction);
+        window.addEventListener("resize", this.handleResize);
+        this.handleResize();
+        window.addEventListener("keydown", (evt) => {
+          evt = evt || window.event;
+          if (evt.keyCode == 27) {
+            this.modalVideo = false;
+          }
+        });
+      }
     }
   },
 };
