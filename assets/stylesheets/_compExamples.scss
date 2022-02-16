@@ -1,0 +1,113 @@
+@import "./global.scss";
+.examples {
+  .examples__container {
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px 40px;
+    justify-content: center;
+    @media only screen and (max-width: 1408px) {
+      gap: 60px 30px;
+    }
+    @media only screen and (max-width: 1279px) {
+      margin-top: 60px;
+    }
+    @media only screen and (max-width: 1024px) {
+      margin: 0;
+      margin-top: 60px;
+    }
+    @media only screen and (max-width: 768px) {
+      margin-top: 30px;
+    }
+    .exmodule {
+      cursor: pointer;
+      // width: 360px;
+      width: 30%;
+      border-radius: 10px;
+      @media only screen and (max-width: 1279px) {
+        width: 30%;
+      }
+      @media only screen and (max-width: 990px) {
+        width: 47%;
+      }
+      @media only screen and (max-width: 768px) {
+        background-size: cover;
+        width: 100%;
+        height: max-content;
+      }
+      .front {
+        height: 100%;
+      }
+      .module-text {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .img-icon {
+          @media only screen and (max-width: 767px) {
+            width: 61px;
+            height: 62px;
+          }
+          img {
+          }
+        }
+        .text {
+          display: flex;
+          align-items: flex-start;
+          text-align: left;
+          color: #ffffff;
+          display: flex;
+          flex-direction: column;
+          padding-top: 20px;
+          h2 {
+            font-weight: bold;
+            font-size: 24px;
+            color: #212037;
+            padding-bottom: 10px;
+          }
+          p {
+            font-weight: 500;
+            font-size: 18px;
+            color: #7c7f91;
+            line-height: 160%;
+          }
+          @media only screen and (max-width: 767px) {
+            padding-top: 20px;
+            font-size: 24px;
+          }
+          @media only screen and (max-width: 375px) {
+            font-size: 24px;
+          }
+        }
+      }
+    }
+  }
+}
+///////////////////////////////////////////////////////@at-root.
+
+.cardd {
+  color: inherit;
+  cursor: pointer;
+  perspective: 1000px;
+  position: relative;
+  // @include mobile(800px) {
+  //   width: calc(50% - 2rem);
+  // }
+  // @include mobile(500px) {
+  //   width: 100%;
+  // }
+}
+
+.front {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  .front-img {
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+    }
+  }
+}

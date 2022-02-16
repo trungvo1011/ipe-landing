@@ -1,0 +1,81 @@
+@import "./global.scss";
+.footer {
+  background-color: #fff;
+  padding: 80px 0;
+  @media only screen and (max-width: 375px) {
+    padding: 40px 0;
+  }
+  .footer__container {
+    .content {
+      display: flex;
+      align-items: center;
+      @media only screen and (max-width: 1279px) {
+        flex-direction: column;
+        align-items: baseline;
+      }
+      .logo-footer {
+        width: 230px;
+        margin-right: 60px;
+        @media only screen and (max-width: 1279px) {
+          margin-bottom: 30px;
+        }
+        img {
+          filter: invert(0%) sepia(93%) saturate(7421%) hue-rotate(125deg) brightness(0) contrast(100%);
+          opacity: 0.3;
+        }
+      }
+      ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        align-items: center;
+        @media only screen and (max-width: 992px) {
+          justify-content: center;
+        }
+        @media only screen and (max-width: 767px) {
+          flex-direction: column;
+          align-items: baseline;
+        }
+        li {
+          padding-right: 40px;
+          font-weight: 600;
+          font-size: 16px;
+          color: #7c7f91;
+          cursor: pointer;
+          @media only screen and (max-width: 767px) {
+            padding-bottom: 20px;
+          }
+          @media only screen and (max-width: 375px) {
+            padding-right: 20px;
+            font-size: 16px;
+          }
+          a {
+            color: #7c7f91;
+            font-weight: 600;
+            &:hover {
+              color: #7c7f91 !important;
+              border-bottom: 2px solid #7c7f90;
+            }
+          }
+        }
+      }
+    }
+    .information {
+      font-size: 12px;
+      color: #7c7f91;
+      font-family: "Pretendard";
+      @media only screen and (max-width: 375px) {
+        font-size: 12px;
+      }
+    }
+    .years {
+      margin-top: 10px;
+      font-size: 12px;
+      color: #7c7f91;
+      font-family: "Pretendard";
+      @media only screen and (max-width: 375px) {
+        font-size: 12px;
+      }
+    }
+  }
+}

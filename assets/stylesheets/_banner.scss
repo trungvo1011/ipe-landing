@@ -1,0 +1,115 @@
+@import "./global.scss";
+.hompage-baner {
+  width: 100%;
+  display: flex;
+  @media only screen and (max-width: 1024px) {
+    padding-top: 0;
+  }
+  .arrowExpand {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    cursor: pointer;
+    img {
+      animation: arrow 4s infinite;
+      // transform: rotate(180deg) !important;
+      // filter: invert(160%) sepia(10%) saturate(7340%) hue-rotate(921deg) brightness(100%) contrast(312%);
+      width: 25px;
+    }
+  }
+  .radio-btns__btn {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    width: 100% !important;
+  }
+  .containe {
+    width: 100%;
+    max-height: 240px;
+    text-align: center;
+    max-width: auto;
+    margin: 0 auto;
+    @media only screen and (max-width: 1279px) {
+      padding: 0 50px;
+    }
+    &__img {
+      @media only screen and (max-width: 1279px) {
+        width: 393px;
+        margin: 0 auto;
+      }
+      @media only screen and (max-width: 768px) {
+        width: 230px;
+      }
+    }
+    &__text {
+      width: 1160px;
+      height: 192px;
+      margin: 0 auto;
+      @media only screen and (max-width: 1279px) {
+        width: 904px;
+      }
+      @media only screen and (max-width: 1024px) {
+        width: 684px;
+        height: auto;
+      }
+      @media only screen and (max-width: 768px) {
+        width: 315px;
+      }
+      p {
+        color: #fff;
+        font-size: 80px;
+        font-weight: bold;
+        @media only screen and (max-width: 1279px) {
+          font-size: 80px;
+        }
+        @media only screen and (max-width: 768px) {
+          font-size: 40px;
+        }
+      }
+    }
+  }
+  &__left {
+    width: 100%;
+    height: 960px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0.3s;
+
+    @media only screen and (max-width: 990px) {
+      width: 100%;
+    }
+    @media only screen and (max-width: 582px) {
+      height: 550px;
+    }
+    @media only screen and (max-width: 375px) {
+      height: 400px;
+    }
+  }
+}
+
+@keyframes arrow {
+  0% {
+    transform: translate(0, -40%);
+    opacity: 0.1;
+  }
+  25% {
+    transform: translate(0, -70%);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(0, -40%);
+    opacity: 0.1;
+  }
+  75% {
+    transform: translate(0, -70%);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, -40%);
+    opacity: 0.1;
+  }
+}

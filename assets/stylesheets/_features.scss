@@ -1,0 +1,210 @@
+.features {
+  .features__container {
+    padding-top: 180px;
+    padding-bottom: 150px;
+    @media only screen and (max-width: 1024px) {
+      margin: 0 60px;
+    }
+    @media only screen and (max-width: 768px) {
+      margin: 0 30px;
+      padding: 120px 0;
+    }
+    .feture-respon {
+      padding-top: 144px;
+      @media only screen and (max-width: 768px) {
+        padding-top: 80px;
+      }
+    }
+    .introductions {
+      display: flex;
+      // margin: 0 60px;
+      margin-top: 60px;
+      @media only screen and (max-width: 1024px) {
+        flex-direction: column;
+      }
+      @media only screen and (max-width: 768px) {
+        margin-top: 30px;
+      }
+      .img-intros {
+        width: 63%;
+        height: 50%;
+        @media only screen and (max-width: 1279px) {
+        }
+        @media only screen and (max-width: 1024px) {
+          width: 100%;
+          margin-bottom: 48px;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 8px;
+        }
+      }
+      .img-intros:nth-child(1) {
+        margin-right: 48px;
+        @media only screen and (max-width: 1024px) {
+          margin-right: 0;
+        }
+      }
+      .img-intros:nth-child(2) {
+        margin-left: 48px;
+        @media only screen and (max-width: 1024px) {
+          margin-left: 0;
+        }
+      }
+      .text-intros {
+        width: 30%;
+        @import url("https://fonts.googleapis.com/css?family=Hind:300,400&display=swap");
+
+        $bg: #fff;
+        $text: #7288a2;
+        $gray: #4d5974;
+        $lightgray: #e5e5e5;
+        $blue: #03b5d2;
+        @media only screen and (max-width: 1024px) {
+          width: auto;
+        }
+        * {
+          box-sizing: border-box;
+          &::before,
+          &::after {
+            box-sizing: border-box;
+          }
+        }
+
+        body {
+          margin: 0;
+          padding: 0;
+          font-family: "Hind", sans-serif;
+          background: $bg;
+          color: $gray;
+          display: flex;
+          min-height: 100vh;
+        }
+
+        .container {
+          margin: 0 auto;
+        }
+
+        .accordion {
+          .accordion-item {
+            background: #ffffff;
+            padding: 24px;
+            border-radius: 8px;
+            margin-bottom: 16px;
+            cursor: pointer;
+          }
+          button {
+            position: relative;
+            display: flex;
+            text-align: left;
+            width: 100%;
+            border: none;
+            background: none;
+            outline: none;
+            align-items: center;
+            justify-content: space-between;
+            .accordion-title {
+              font-weight: bold;
+              font-size: 24px;
+              color: #212037;
+              font-family: "Pretendard";
+              @media only screen and (max-width: 768px) {
+                font-size: 18px;
+              }
+            }
+            .icon {
+              display: inline-block;
+              position: absolute;
+              top: 18px;
+              right: 0;
+              width: 22px;
+              height: 22px;
+              border: 1px solid;
+              border-radius: 22px;
+              &::before {
+                display: block;
+                position: absolute;
+                content: "";
+                top: 9px;
+                left: 5px;
+                width: 10px;
+                height: 2px;
+                background: currentColor;
+              }
+              &::after {
+                display: block;
+                position: absolute;
+                content: "";
+                top: 5px;
+                left: 9px;
+                width: 2px;
+                height: 10px;
+                background: currentColor;
+              }
+            }
+          }
+          button[aria-expanded="true"] {
+            img {
+              transform: rotate(180deg);
+            }
+            color: $blue;
+            .icon {
+              &::after {
+                width: 0;
+              }
+            }
+            + .accordion-content {
+              opacity: 1;
+              max-height: max-content;
+              transition: all 200ms linear;
+              will-change: opacity, max-height;
+              padding-top: 20px;
+            }
+          }
+          .accordion-content {
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: opacity 200ms linear, max-height 200ms linear;
+            will-change: opacity, max-height;
+            p {
+              font-weight: 500;
+              font-size: 18px;
+              color: #7c7f91;
+              @media only screen and (max-width: 768px) {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+        h2 {
+          font-weight: bold;
+          font-size: 24px;
+          color: #212037;
+          padding-bottom: 20px;
+          @media only screen and (max-width: 1024px) {
+            font-size: 18px;
+          }
+        }
+        p {
+          font-weight: 500;
+          font-size: 18px;
+          color: #7c7f91;
+          line-height: 160%;
+          font-family: "Pretendard";
+          @media only screen and (max-width: 1024px) {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    .introductions__2 {
+      @media only screen and (max-width: 1024px) {
+        flex-direction: column-reverse !important;
+      }
+    }
+  }
+}

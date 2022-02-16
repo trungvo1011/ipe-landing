@@ -1,0 +1,119 @@
+@import "./global.scss";
+.certifications {
+  background: #212037;
+  .certifications__container {
+    padding: 180px 0 !important;
+    // max-width: 1160px !important;
+    @media only screen and (max-width: 768px) {
+      padding: 120px 0 !important;
+    }
+    .exmodule {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 60px;
+      gap: 40px;
+      @media only screen and (max-width: 768px) {
+        flex-direction: column;
+      }
+      .front {
+        // width: 355px;
+        width: 33%;
+        height: max-content;
+        cursor: pointer;
+        border-radius: 10px;
+        @media only screen and (max-width: 1024px) {
+          // width: 195px;
+        }
+        @media only screen and (max-width: 768px) {
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+        }
+        .front-img {
+          width: 240px;
+          height: 240px;
+          margin: 0 auto;
+          @media only screen and (max-width: 1024px) {
+            width: 135px;
+            height: 180px;
+          }
+          @media only screen and (max-width: 768px) {
+            width: 60px;
+            height: 80px;
+            margin: 0;
+            margin-right: 23px;
+          }
+        }
+      }
+      .module-text {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        @media only screen and (max-width: 768px) {
+          width: 100%;
+        }
+        .img-icon {
+          img {
+          }
+        }
+        .text {
+          display: flex;
+          align-items: flex-start;
+          text-align: left;
+          color: #ffffff;
+          display: flex;
+          flex-direction: column;
+          padding-top: 60px;
+          @media only screen and (max-width: 768px) {
+            padding-top: 0;
+          }
+          h2 {
+            font-weight: bold;
+            font-size: 24px;
+            color: #fff;
+            padding-bottom: 10px;
+            @media only screen and (max-width: 768px) {
+              font-size: 18px;
+            }
+          }
+          p {
+            font-weight: 500;
+            font-size: 18px;
+            color: #f6f7f9;
+            line-height: 160%;
+            @media only screen and (max-width: 768px) {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+///////////////////////////////////////////////////////@at-root.
+
+.cardd {
+  color: inherit;
+  cursor: pointer;
+  perspective: 1000px;
+  position: relative;
+  // @include mobile(800px) {
+  //   width: calc(50% - 2rem);
+  // }
+  // @include mobile(500px) {
+  //   width: 100%;
+  // }
+}
+
+.front {
+  display: flex;
+  flex-direction: column;
+  .front-img {
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

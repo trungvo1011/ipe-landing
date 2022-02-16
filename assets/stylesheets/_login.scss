@@ -1,0 +1,240 @@
+@import "./global.scss";
+.modal {
+  animation: fadein 0.5s !important;
+}
+.modal-close {
+  top: 10px;
+  right: 10px;
+  position: absolute;
+}
+.delete::after,
+.delete::before,
+.modal-close::after,
+.modal-close::before {
+  background-color: grey;
+}
+.modal-background {
+  background-color: #0a0a0a62 !important;
+}
+.modal-content {
+  transition: 1s;
+  background-color: #fff;
+  width: 540px;
+  // height: 582px;
+  height: max-content;
+  padding: 40px;
+  text-align: center;
+  animation: fadein 0.5s !important;
+  @media only screen and (max-width: 767px) {
+    padding: 20px 30px;
+  }
+  @media only screen and (max-width: 582px) {
+    width: 320px;
+  }
+
+  .forget-pass {
+    height: 20px;
+  }
+  .signup-title {
+    padding: 16px 0;
+    font-weight: bold;
+    font-size: 16px;
+    color: #212037;
+  }
+  .field {
+    position: relative;
+    margin-bottom: 10px;
+    .control {
+      input {
+        box-shadow: none;
+        font-family: "Pretendard";
+        color: #7c7f91;
+        height: 52px;
+        font-size: 14px;
+      }
+      button {
+        background: #e0e0e0;
+        border-radius: 6px;
+        width: 100%;
+        color: #bdbdbd;
+        font-size: 16px;
+        font-family: "Pretendard";
+        border-radius: 6px;
+        height: 52px;
+      }
+    }
+
+    .google {
+      background-color: #fff !important;
+      color: #212037 !important;
+      font-weight: bold;
+      height: 56px;
+      border: 1px solid #f1f1f1;
+      &:hover {
+        opacity: 0.8;
+      }
+      &:active {
+        opacity: 0.6;
+      }
+    }
+    .apple {
+      background-color: #000 !important;
+      color: #fff !important;
+      font-weight: bold;
+      height: 56px;
+      border: 1px solid #f1f1f1;
+      &:hover {
+        opacity: 0.8;
+      }
+      &:active {
+        opacity: 0.6;
+      }
+    }
+    img {
+      position: absolute;
+      z-index: 1;
+      left: 22px;
+      top: 14px;
+      @media only screen and (max-width: 582px) {
+        left: 16px;
+      }
+    }
+  }
+  .checkbox-control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 17px 0;
+    padding-top: 7px;
+    label,
+    a {
+      font-family: Pretendard;
+      font-size: 12px;
+      color: #7c7f91;
+      display: flex;
+      cursor: pointer;
+      align-items: center;
+
+      input {
+        margin-right: 6px;
+      }
+    }
+    a:nth-child(2) {
+      &:hover {
+        border-bottom: 2px solid #7c7f91;
+      }
+    }
+    p {
+      font-weight: 700;
+    }
+  }
+  .or {
+    color: #7c7f91;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 20px 0;
+  }
+  .signup {
+    font-size: 14px;
+    color: #7c7f91;
+    margin-top: 20px;
+    span {
+      color: #5c6bc0;
+      font-weight: bold;
+      margin-left: 5px;
+      cursor: pointer;
+      &:hover {
+        border-bottom: 2px solid #5c6bc0 !important;
+      }
+    }
+  }
+}
+
+// checkbox
+
+.container__checbox {
+  display: block;
+  position: relative;
+  padding-left: 20px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container__checbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 2px;
+  opacity: 0.8;
+  left: 0;
+  height: 13.5px;
+  width: 13.5px;
+  border: 1px solid #7c7f90;
+  border-radius: 2px;
+  &:hover {
+    opacity: 1;
+  }
+  &:active {
+    box-shadow: none !important;
+  }
+  &:focus {
+    box-shadow: 0px 0px 1px 2px #ced3ec !important;
+  }
+}
+.checkmark__active {
+  border: none !important;
+  &:active {
+    box-shadow: 0px 0px 1px 2px #ced3ec !important;
+  }
+  &:after {
+    left: 4px !important;
+    border-width: 0 2px 2px 0 !important;
+    top: 2px !important;
+  }
+}
+
+/* On mouse-over, add a grey background color */
+.container__checbox:hover input ~ .checkmark {
+  background-color: #fff;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container__checbox input:checked ~ .checkmark {
+  background-color: #4a58b2;
+  border-radius: 2px;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container__checbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container__checbox .checkmark:after {
+  left: 3.5px;
+  top: 0.8px;
+  width: 5px;
+  height: 8px;
+  border: 1px solid white;
+  border-width: 0 2.3px 2.3px 0;
+  transform: rotate(45deg);
+}

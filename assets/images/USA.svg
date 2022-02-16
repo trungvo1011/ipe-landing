@@ -1,0 +1,28 @@
+<svg width="120" height="90" viewBox="0 0 120 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="120" height="90" rx="10" fill="white"/>
+<rect width="67.5" height="52.5" fill="#41479B"/>
+<rect x="67.5" width="52.5" height="7.5" fill="#DC251C"/>
+<rect x="67.5" y="15" width="52.5" height="7.5" fill="#DC251C"/>
+<rect x="67.5" y="30" width="52.5" height="7.5" fill="#DC251C"/>
+<rect x="67.5" y="45" width="52.5" height="7.5" fill="#DC251C"/>
+<rect y="60" width="120" height="7.5" fill="#DC251C"/>
+<rect y="75" width="120" height="7.50001" fill="#DC251C"/>
+<rect x="7.5" y="7.5" width="7.5" height="7.5" fill="#C5D0EC"/>
+<rect x="22.5" y="7.5" width="7.5" height="7.5" fill="#C5D0EC"/>
+<rect x="37.5" y="7.5" width="7.49999" height="7.5" fill="#C5D0EC"/>
+<rect x="52.5" y="7.5" width="7.5" height="7.5" fill="#C5D0EC"/>
+<rect x="7.5" y="22.5" width="7.5" height="7.50001" fill="#C5D0EC"/>
+<rect x="22.5" y="22.5" width="7.5" height="7.50001" fill="#C5D0EC"/>
+<rect x="37.5" y="22.5" width="7.49999" height="7.50001" fill="#C5D0EC"/>
+<rect x="15" y="30" width="7.5" height="7.5" fill="#C5D0EC"/>
+<rect x="30" y="30" width="7.5" height="7.5" fill="#C5D0EC"/>
+<rect x="45" y="30" width="7.5" height="7.5" fill="#C5D0EC"/>
+<rect x="15" y="15" width="7.5" height="7.49999" fill="#C5D0EC"/>
+<rect x="30" y="15" width="7.5" height="7.49999" fill="#C5D0EC"/>
+<rect x="45" y="15" width="7.5" height="7.49999" fill="#C5D0EC"/>
+<rect x="52.5" y="22.5" width="7.5" height="7.50001" fill="#C5D0EC"/>
+<rect x="7.5" y="37.5" width="7.5" height="7.49999" fill="#C5D0EC"/>
+<rect x="22.5" y="37.5" width="7.5" height="7.49999" fill="#C5D0EC"/>
+<rect x="37.5" y="37.5" width="7.49999" height="7.49999" fill="#C5D0EC"/>
+<rect x="52.5" y="37.5" width="7.5" height="7.49999" fill="#C5D0EC"/>
+</svg>
